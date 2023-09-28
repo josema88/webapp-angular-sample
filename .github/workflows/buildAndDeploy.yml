@@ -45,8 +45,8 @@ jobs:
         uses: azure/CLI@v1
         with:
           inlineScript: |
-              az storage blob upload-batch --overwrite --account-name samplewebsa --auth-mode key -s $GITHUB_WORKSPACE/dist/webapp-uvg2022 -d '$web'
-
+              az storage blob upload-batch --overwrite --account-name samplewebsa --auth-mode key -s $GITHUB_WORKSPACE/dist/webapp-uvg2022 -d '$web' --account-key ${{ secrets.AZ_STORAGE_ACC_KEY }}
+              
       # Azure logout
       - name: logout
         run: |
