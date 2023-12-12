@@ -15,6 +15,7 @@ on:
 jobs:
   # This workflow contains a single job called "buildAndDeploy"
   buildAndDeploy:
+    name: build-and-deploy
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
